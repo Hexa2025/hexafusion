@@ -1,0 +1,340 @@
+ul.slick-dots {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 45px;
+    text-align: center;
+
+    li {
+        display: inline-block;
+        border: 0;
+        width: unset;
+        height: unset;
+
+        button {
+            border: 0;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            margin: 0px 7px 0px 7px;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        &.slick-active {
+            button {
+                width: 14px;
+                height: 14px;
+                background: $theme-color;
+                transform: translateY(-1px);
+            }
+        }
+    }
+}
+
+.dot-style-1 {
+    ul.slick-dots {
+        margin-top: 0;
+    }
+}
+
+.dot-style-2 {
+    ul.slick-dots {
+
+        li {
+            button {
+                background: transparent;
+                border: 2px solid $black;
+            }
+
+            &.slick-active {
+                button {
+                    background: $black;
+                }
+            }
+        }
+    }
+}
+
+.border-line {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.1);
+        left: 0;
+        top: 51.5%;
+        right: 0;
+        transform: translateY(-50%);
+        margin: 0 auto;
+    }
+}
+
+.arrow-style-1,
+.custom-arrow-one,
+.custom-arrow-two {
+
+    .slick-prev,
+    .slick-next,
+    .slick-arrow {
+        background: transparent;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        border: 0;
+        @include transition(.4s);
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            right: -23px;
+            top: -23px;
+            border: 1px solid $black;
+            z-index: -1;
+        }
+
+        &:hover {
+            &::before {
+                border-color: $theme-color2;
+                background: $theme-color2;
+            }
+        }
+    }
+
+    .slick-prev {
+        justify-content: end;
+
+        &::before {
+            left: -23px;
+            right: auto;
+        }
+    }
+}
+
+.custom-arrow-two {
+    .slick-arrow {
+        &::before {
+            top: -22px;
+        }
+
+        &:hover {
+            &::before {
+                border-color: $theme-color;
+                background: $theme-color;
+            }
+        }
+    }
+
+    .prev-p4.slick-arrow {
+        margin-right: 15px;
+
+        &::before {
+            left: -23px;
+        }
+    }
+}
+
+.arrow-border-wrapper {
+    padding-left: 85px;
+    padding-right: 85px;
+
+    .bg-line {
+        width: 100%;
+        height: 1px;
+        background: rgba(0, 0, 0, 0.3);
+        transform: translateY(15px);
+    }
+
+    .arrow-style-1 {
+        background: $white;
+        padding: 0 50px;
+        position: relative;
+        z-index: 2;
+
+        .slick-prev,
+        .slick-next {
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+
+    @media #{$max-lg} {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+
+.arrow-style {
+    .slick-arrow {
+        color: $heding;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        position: absolute;
+        top: 55%;
+        transform: translateY(-55%);
+        z-index: 1;
+        @include transition(.4s);
+
+        &:hover {
+            color: $white;
+            background: $theme-color;
+        }
+    }
+
+    .slick-prev {
+        left: -1%;
+    }
+
+    .slick-next {
+        right: -1%;
+    }
+}
+
+.arrow-style-2 {
+    position: relative;
+    z-index: 1;
+
+
+    .slick-prev,
+    .slick-next {
+        border: 0;
+        background: $white;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 150px;
+        @include transition(.4s);
+
+        &:hover {
+            background: $theme-color;
+        }
+    }
+
+    .slick-prev {
+        margin-right: 35px;
+    }
+}
+
+.arrow-style-3 {
+    left: -15px;
+    bottom: 10%;
+
+    .slick-arrow {
+        width: 100px;
+        height: 95px;
+        background: $white;
+        left: 0;
+        bottom: 0;
+        line-height: 95px;
+        text-align: center;
+        @include transition(.4s);
+
+        &:hover {
+            background: $theme-color2;
+        }
+    }
+
+    .prev-p4 {
+        background: $theme-color2;
+    }
+}
+
+.arrow-style-4 {
+    .slick-arrow {
+        font-size: 30px;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        line-height: 67px;
+        text-align: center;
+        margin-left: 10px;
+        border: 0;
+        background: transparent;
+        @include transition(.4s);
+
+        &:hover {
+            color: $white;
+            background: $theme-color;
+        }
+    }
+}
+
+.number-wrapper {
+    display: inline-flex;
+    align-items: end;
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    z-index: 2;
+    line-height: 1;
+
+
+    .number-pagination {
+        color: $white;
+        font-size: 40px;
+        font-weight: 600;
+        font-family: $manrope;
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .total-pagination {
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        line-height: 1;
+    }
+
+    .divider-line {
+        width: 2px;
+        height: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        margin: 0 6px 0 4px;
+        line-height: 1;
+        transform: rotate(20deg) translateY(-2px);
+    }
+}
+
+.number-wrapper-2 {
+    display: inline-flex;
+    position: absolute;
+    left: 70px;
+    bottom: 81px;
+    z-index: 2;
+    transform: rotate(-90deg);
+
+
+    .number-pagination {
+        font-size: 22px;
+        font-weight: 500;
+        font-family: $manrope;
+        color: $heding;
+    }
+
+    @media #{$max-md} {
+        left: 0;
+        bottom: 0;
+    }
+}
