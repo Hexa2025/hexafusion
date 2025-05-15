@@ -797,39 +797,39 @@
 
 
   // Disable Right Click
-  document.addEventListener("contextmenu", function (e) {
-    e.preventDefault();
-  });
+//   document.addEventListener("contextmenu", function (e) {
+//     e.preventDefault();
+//   });
 
-  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
-      (e.ctrlKey && e.key === "U")
-    ) {
-      e.preventDefault();
-    }
-  });
+//   // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+//   document.addEventListener("keydown", function (e) {
+//     if (
+//       e.key === "F12" ||
+//       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+//       (e.ctrlKey && e.key === "U")
+//     ) {
+//       e.preventDefault();
+//     }
+//   });
 
-  // Detect DevTools Open by Measuring Window Outer & Inner Height
-  setInterval(function () {
-    if (window.outerHeight - window.innerHeight > 100) {
-      document.body.innerHTML = "<h1 style='text-align:center;margin-top:100px;'>DevTools Detected. Page Blocked.</h1>";
-    }
-  }, 1000);
+//   // Detect DevTools Open by Measuring Window Outer & Inner Height
+//   setInterval(function () {
+//     if (window.outerHeight - window.innerHeight > 100) {
+//       document.body.innerHTML = "<h1 style='text-align:center;margin-top:100px;'>DevTools Detected. Page Blocked.</h1>";
+//     }
+//   }, 1000);
 
-  document.addEventListener("contextmenu", (e) => e.preventDefault());
+//   document.addEventListener("contextmenu", (e) => e.preventDefault());
 
-  // Disable Specific Keyboard Shortcuts
-  document.addEventListener("keydown", function (e) {
-    if (
-      e.key === "F12" ||
-      (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "c" || e.key === "s")) ||
-      (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C" || e.key === "S")) ||
-	  (e.metaKey && (e.key === "c" || e.key === "s"))
-    ) {
-      e.preventDefault();
-    }
-  });
+//   // Disable Specific Keyboard Shortcuts
+//   document.addEventListener("keydown", function (e) {
+//     if (
+//       e.key === "F12" ||
+//       (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "c" || e.key === "s")) ||
+//       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C" || e.key === "S")) ||
+// 	  (e.metaKey && (e.key === "c" || e.key === "s"))
+//     ) {
+//       e.preventDefault();
+//     }
+//   });
 
