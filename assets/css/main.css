@@ -817,8 +817,8 @@ html.lenis {
   padding: 19px 0 20px 0;
 }
 .main-menu ul li a::before {
-  /* content: "\f282"; */
-  font-family: "bootstrap-icons";
+  /* content: "\f282";
+  font-family: "bootstrap-icons"; */
   font-weight: 700;
   position: absolute;
   font-size: 16px;
