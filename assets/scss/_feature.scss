@@ -1,0 +1,237 @@
+//feature-list
+.feature-list-one {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px 1px 4px 1px;
+    border-color: $hr-border-color;
+    padding: 19px 40px;
+    background: $white;
+    @include transition(.4s);
+
+    .icon {
+        margin-right: 30px;
+    }
+
+    .icon,
+    .feature-title {
+        color: $heding;
+        font-size: 26px;
+        font-weight: 500;
+        font-family: $generalSansMedium;
+    }
+
+    &:hover {
+        background: $theme-color;
+
+        .icon,
+        .feature-title {
+            color: $white;
+        }
+    }
+
+    @media #{$max-laptop} {
+        padding: 14px 20px;
+
+        .icon,
+        .feature-title {
+            font-size: 18px;
+        }
+
+        .icon {
+            margin-right: 0;
+        }
+    }
+}
+
+.feature-list-two {
+    padding-bottom: 10px;
+
+    .icon {
+        margin-right: 10px;
+    }
+
+    .icon {
+        color: $heding;
+        font-size: 20px;
+    }
+
+    .feature-title {
+        color: $heding;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $manrope;
+    }
+
+    &:hover {
+        .icon {
+            color: $theme-color5;
+        }
+    }
+
+    @media #{$max-laptop} {
+        padding: 14px 20px;
+    }
+}
+
+.feature-list-three {
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 1px 1px 4px 1px;
+    border-color: $hr-border-color;
+    padding: 17px 0px 12px 40px;
+    background: $white;
+    @include transition(.4s);
+
+    .icon {
+        margin-right: 22px;
+    }
+
+    .icon,
+    .feature-title {
+        color: $heding;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: $generalSansMedium;
+    }
+
+    &:hover {
+        background: $theme-color;
+
+        .icon,
+        .feature-title {
+            color: $white;
+        }
+    }
+
+    @media #{$max-laptop} {
+        padding: 14px 20px;
+
+        .icon,
+        .feature-title {
+            font-size: 18px;
+        }
+    }
+}
+
+.feature-list-four {
+    margin-bottom: 20px;
+
+    .icon {
+        font-size: 20px;
+        color: $white;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: $theme-color;
+        line-height: 24px;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .feature-title {
+        color: $heding;
+        font-size: 20px;
+        font-weight: 500;
+        font-family: $generalSansMedium;
+    }
+
+    @media #{$max-xs} {
+        .feature-title {
+            font-size: 18px;
+        }
+    }
+}
+
+//feature wrap
+.feature-wrap-1 {
+    background: $white;
+    border-radius: 30px;
+    padding: 40px 35px 30px 35px;
+    margin-bottom: 33px;
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.03);
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        line-height: 80px;
+        text-align: center;
+        background: $theme-color2;
+        margin-bottom: 35px;
+    }
+
+    &.ic-2 {
+        .icon {
+            background: $theme-color;
+        }
+    }
+
+    &.ic-3 {
+        .icon {
+            background: $theme-color4;
+        }
+    }
+
+    .feature-title {
+        color: $heding;
+        font-size: 28px;
+        font-family: $plafairDisplay;
+        font-weight: 700;
+        margin-bottom: 31px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+
+    @media #{$max-laptop} {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .feature-title {
+            font-size: 20px;
+        }
+    }
+}
+
+.feature-wrap-2 {
+    text-align: center;
+    margin-bottom: 45px;
+
+    .icon {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        line-height: 75px;
+        text-align: center;
+        border: 1px solid #E0E0E0;
+        margin-bottom: 31px;
+    }
+
+    .feature-title {
+        margin-bottom: 4px;
+
+        a {
+            color: $heding;
+            font-size: 24px;
+            font-family: $generalSansMedium;
+            font-weight: 500;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        color: #525252;
+    }
+
+    @media #{$max-laptop} {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .feature-title {
+            font-size: 20px;
+        }
+    }
+}
